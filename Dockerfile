@@ -2,7 +2,6 @@
 FROM alpine:latest
 
 # Install python and pip
-Run python3 -m venv env
 RUN apk add --no-cache --update python3 py3-pip bash
 ADD ./webapp/requirements.txt /tmp/requirements.txt
 
