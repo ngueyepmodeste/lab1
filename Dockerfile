@@ -2,7 +2,8 @@
 FROM alpine:latest
 
 # Install python and pip
-RUN apk add --no-cache --update python3-venv py3-pip bash
+Run python3 -m venv env
+RUN apk add --no-cache --update python3 py3-pip bash
 ADD ./webapp/requirements.txt /tmp/requirements.txt
 
 # Install dependencies
