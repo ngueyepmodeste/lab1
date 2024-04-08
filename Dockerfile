@@ -6,8 +6,9 @@ RUN apk add --no-cache --update python3 py3-pip bash
 ADD ./webapp/requirements.txt /tmp/requirements.txt
 
 # Install dependencies
-RUN pip --no-cache-dir install
+
 RUN pip3 install --no-cache-dir -q -r /tmp/requirements.txt
+
 # Add our code
 ADD ./webapp /opt/webapp/
 WORKDIR /opt/webapp
